@@ -1,0 +1,53 @@
+
+  .container_bg_color{
+    background-color:#e6d0c8;
+    padding:2rem;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .text_align_center{
+    text-align: center;
+  }
+
+  .text_align_left{
+    text-align: left;
+  }
+  
+  .bg_color_white{
+    background-color:#055db01c;
+    padding-top: 0.4rem;
+  }
+  
+  .button {
+    display: inline-block;
+    font-family:monospace;
+    font-size: 16px;  
+    background:#21313E;
+    border-radius: 0.4rem;
+    padding-block: 0.4rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+  
+  a:link , a:visited ,a:hover ,a:active 
+  {
+    color:#fff;
+    text-decoration: none;
+  }
+
+  .header_padding
+  {
+    padding-bottom: 0.4rem;
+  }
+
+  .row_s{
+    text-align: center;
+  }
+
+  .col_s{
+    text-align: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
