@@ -9,14 +9,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape(): 
     # Setup splinter
-    browser = "NOT OPEN YET"
-    print ("browser " + browser)
-    if (browser == "NOT OPEN YET"):
-        executable_path = {'executable_path': ChromeDriverManager().install()}
-        browser = Browser('chrome', **executable_path, headless=False)  
-
-    # print ("browser here")
-    # print(browser)            
+    executable_path = {'executable_path': ChromeDriverManager().install()}
+    browser = Browser('chrome', **executable_path, headless=False)              
     scrape_data = {}
 
     #### Scrape NASA Mars News
@@ -27,8 +21,8 @@ def scrape():
     
     # If the website did not entirely load and failed to fetch info
     while len(browser.find_by_xpath('//div[@class="list_text"]')) == 0  :
-
-        # print("The web site is trying to load ........" )
+        
+        print("The web site is trying to load ........" )
         browser.visit(url_redplanetscience)
         time.sleep(2) 
 
@@ -70,6 +64,13 @@ def scrape():
 
     # print(tables_galaxyfacts)
 
+    # df = tables_galaxyfacts[1]
+    # galaxyfacts_html = df.to_html()
+    # galaxyfacts_html = galaxyfacts_html.replace('\n','')
+    # #print(galaxyfacts_html)
+    # galaxyfacts_html = galaxyfacts_html.replace('class="dataframe"','class="table tablipede-str"')
+    # galaxyfacts_html = galaxyfacts_html.replace('<thead>    <tr style="text-align: right;">      <th>0</th>      <th>1</th>    </tr>  </thead>','')
+    # scrape_data["galaxyfacts_html"]  = galaxyfacts_html
 
     df = tables_galaxyfacts[1]
     galaxyfacts_html = df.to_html(index=False)

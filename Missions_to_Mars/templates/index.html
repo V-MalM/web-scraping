@@ -23,14 +23,16 @@
       
     </div>
     <br />
+
+{% for mars_data in results %}
     <div class="row d-flex justify-content-around">
 
         <div class="col-sm-12  col-md-12 col-lg-12">
           
-          <h4>Latest Mars News</h4> <h6>{{results['news_date']}}</h6><br /><hr>
-          <h6>{{results['news_title']}}</h6>
+          <h4>Latest Mars News</h4> <h6>{{mars_data['news_date']}}</h6><br /><hr>
+          <h6>{{mars_data['news_title']}}</h6>
           
-          <p>{{results['news_para']}}</p>
+          <p>{{mars_data['news_para']}}</p>
         </div>
         
     </div>
@@ -40,12 +42,12 @@
         <div class="col-sm-12  col-md-12 col-lg-8">
           <h6>Featured Image</h6><br />
           
-          <p><img src="{{results['featured_image_url']}}"></p>
+          <p><img src="{{mars_data['featured_image_url']}}"></p>
         </div>
 
         <div class="col-sm-12  col-md-12 col-lg-4">
             <h6>Mars Facts</h6><br />
-            {{results['galaxyfacts_html'] | safe }}
+            {{mars_data['galaxyfacts_html'] | safe }}
         </div>
         
     </div>   
@@ -63,33 +65,28 @@
         
     </div>
     <hr>
-    
-    <div class="row d-flex justify-content-around row_s">
-        <div class="col-sm-12  col-md-12 col-lg-5 col_s">
-            <img src="{{results['hemisphere_image_urls'][0]['img_url']}}" width="100%">
-            <br />
-            <h6 class="visualization_page_h"><center>{{results['hemisphere_image_urls'][0]['title']}}</center></h6><br />  
-        </div>   
-        <div class="col-sm-12  col-md-12 col-lg-5 col_s">
-            <img src="{{results['hemisphere_image_urls'][1]['img_url']}}" width="100%">
-            <br />
-            <h6 class="visualization_page_h"><center>{{results['hemisphere_image_urls'][1]['title']}}</center></h6><br />  
-        </div>     
-    </div>
 
-    <div class="row d-flex justify-content-around row_s">
-        <div class="col-sm-12  col-md-12 col-lg-5  col_s">
-            <img src="{{results['hemisphere_image_urls'][2]['img_url']}}" width="100%">
-            <br />
-            <h6 class="visualization_page_h"><center>{{results['hemisphere_image_urls'][2]['title']}}</center></h6><br />  
-        </div>   
-        <div class="col-sm-12  col-md-12 col-lg-5 col_s">
-            <img src="{{results['hemisphere_image_urls'][3]['img_url']}}" width="100%">
-            <br />
-            <h6 class="visualization_page_h"><center>{{results['hemisphere_image_urls'][3]['title']}}</center></h6><br />  
-        </div>     
-    </div>
     
+    {%for each_url in mars_data['hemisphere_image_urls']%}
+    
+    {% if loop.index is not divisibleby 2 %}
+    <div class="row d-flex justify-content-around row_s">
+    {% endif %}
+    <div class="col-sm-12  col-md-12 col-lg-5 col_s">
+      <img src="{{each_url['img_url']}}" width="100%">
+      <br />
+      <h6 class="visualization_page_h"><center>{{each_url['title']}}</center></h6><br />  
+    </div>  
+    {% if loop.index is divisibleby 2 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+    
+    {% if mars_data['hemisphere_image_urls']|length is not divisibleby 2 %}
+    </div>
+    {% endif %}    
+
+  {% endfor %}   
 
  </div>
 
