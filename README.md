@@ -1,12 +1,12 @@
-# Web Scraping Project - Mission to Mars
+# Web Scraping - Mission to Mars
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
-To build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines the process.
+This web application scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. Following outlines the process.
 
 ## Step 1 - Scraping
 
-Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
+Used Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
 * Created a Jupyter Notebook file called `mission_to_mars.ipynb` and built code to complete all scraping and analysis tasks. The following outlines what data was scraped.
 
