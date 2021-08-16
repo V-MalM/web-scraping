@@ -139,7 +139,7 @@ hemisphere_image_urls = [{'title': 'Cerberus Hemisphere Enhanced',
 
 Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
-* Started by converting Jupyter notebook into a Python script called ['Code/scrape_mars.py'](scrape_mars.py). Created a function called `scrape` that will execute all scraping code from above and return one Python dictionary containing all of the scraped data.
+* Started by converting Jupyter notebook into a Python script called ['../App_Code_Rep/scrape_mars.py'](scrape_mars.py). Created a function called `scrape` that will execute all scraping code from above and return one Python dictionary containing all of the scraped data.
 
 * Next, createed a route called `/scrape` that will import `scrape_mars.py` script and call  `scrape` function.
 
