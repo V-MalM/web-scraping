@@ -16,15 +16,14 @@ Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/S
 
 
 <details>
-<summary><strong>Click to see code!</strong></summary>
+<summary><strong>Click to see an example!</strong></summary>
 
 ```python
 
 # Example:
-news_date = "08/16/2021"
-news_title = "NASA's Next Mars Mission to Investigate Interior of Red Planet"
-news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up this summer, on course for launch next May from Vandenberg Air Force Base in central California -- the first interplanetary launch in history from America's West Coast."
-
+news_date = "August 16, 2021"
+news_title = "Two Rovers to Roll on Mars Again: Curiosity and Mars 2020"
+news_p = "They look like twins. But under the hood, the rover currently exploring the Red Planet and the one launching there this summer have distinct science tools and roles to play."
 
 ```
 </details>
@@ -43,8 +42,10 @@ news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up 
 * Saved the url string for this image.
 
 ```python
+
 # Example:
-featured_image_url = 'https://spaceimages-mars.com/image/featured/mars2.jpg'
+featured_image_url = 'https://spaceimages-mars.com/image/featured/mars3.jpg'
+
 ```
 
 ### Mars Facts
