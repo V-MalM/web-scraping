@@ -152,11 +152,11 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 * Used bootstarp for HTML template and css for styling the template.
 
 ## Screenshots of final application
-**Image of page before the intital scrape, when there was no data in the database to render. Clicking the 'Scarpe New Data' button would intitiate the process by calling scrape() function.**
+* Image of page before the intital scrape, when there was no data in the database to render. Clicking the 'Scarpe New Data' button would intitiate the process by calling scrape() function.*
 
 ![facts](App_Screen_Shots/screen0.jpg)
 
-**Images of the page after the scrape has been completed. Upon scraping, Data that has been stored to the database is rendered to a HTML template and displayed.**
+* Images of the page after the scrape has been completed. Upon scraping, Data that has been stored to the database is rendered to a HTML template and displayed.*
 
 ![facts](App_Screen_Shots/screen1.jpg)
 ![full_res_images](App_Screen_Shots/screen2.jpg)
