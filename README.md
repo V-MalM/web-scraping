@@ -1,23 +1,23 @@
-# Web Scraping Homework - Mission to Mars
+# Web Scraping Project - Mission to Mars
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
-A web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines the process.
+To build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines the process.
 
 ## Step 1 - Scraping
 
-Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
+Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter, MongoDB.
 
 * Created a Jupyter Notebook file called `mission_to_mars.ipynb` and built code to complete all scraping and analysis tasks. The following outlines what data was scraped.
 
 ### NASA Mars News
 
-* Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored the text to variables. I also scraped the date  of the article which is ofcourse, the current date.
+* Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored the text to variables. Also scraped the date of the article which is ofcourse, the current date.
 
 ```python
 # Example:
+news_date = "08/16/2021"
 news_title = "NASA's Next Mars Mission to Investigate Interior of Red Planet"
-
 news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up this summer, on course for launch next May from Vandenberg Air Force Base in central California -- the first interplanetary launch in history from America's West Coast."
 ```
 
@@ -27,9 +27,9 @@ news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up 
 
 * Used splinter to navigate the site and find the image url for the current Featured Mars Image and assign the url string to a variable called `featured_image_url`.
 
-* Make sure to find the image url to the full size `.jpg` image.
+* Searched for full size `.jpg` image.
 
-* Make sure to save a complete url string for this image.
+* Saved the url string for this image.
 
 ```python
 # Example:
@@ -41,6 +41,8 @@ featured_image_url = 'https://spaceimages-mars.com/image/featured/mars2.jpg'
 * Visited the Mars Facts webpage [here](https://galaxyfacts-mars.com) and used Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 
 * Used Pandas to convert the data to a HTML table string.
+
+* Saved the HTML string to a variable 'galaxyfacts_html'.
 
 ### Mars Hemispheres
 
@@ -68,7 +70,7 @@ hemisphere_image_urls = [
 
 Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
-* Started by converting  Jupyter notebook into a Python script called `scrape_mars.py` with a function called `scrape` that will execute all scraping code from above and return one Python dictionary containing all of the scraped data.
+* Started by converting  Jupyter notebook into a Python script called `scrape_mars.py`. Created a function called `scrape` that will execute all scraping code from above and return one Python dictionary containing all of the scraped data.
 
 * Next, createed a route called `/scrape` that will import `scrape_mars.py` script and call  `scrape` function.
 
@@ -77,6 +79,8 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 * Created a root route `/` that will query Mongo database and pass the mars data into an HTML template to display the data.
 
 * Created a template HTML file called `index.html` that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
+
+* Used bootstarp for HTML template and css for styling the template.
 
 ![final_app_part1.png](Images/final_app.png)
 
