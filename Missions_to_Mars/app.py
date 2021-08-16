@@ -17,7 +17,8 @@ mars_data = db.mars_data
 
 @app.route("/")
 def index():
-    # Fetching one record as we are only creating one record and updating it with each scape
+    # Fetching records. we are only creating one record and updating it with each scrape 
+    # so this will fetch just one record in to the results list. Alternatively we can use find_one
     results = mars_data.find() 
     
     return render_template("index.html", results=results)
@@ -25,10 +26,9 @@ def index():
 
 @app.route("/scrape")
 def scraper():
-    # mars_data = mongo.db.mars_data
+
     scrape_data = scrape_mars.scrape()
     mars_data.update_one({}, {"$set":scrape_data}, upsert=True)
-    #return(scrape_data)
     return redirect("/", code=302)
     
 if __name__ == "__main__":
