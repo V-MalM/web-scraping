@@ -10,7 +10,7 @@ def scrape():
     
     if (browser == "NOT OPEN YET"):
         executable_path = {'executable_path': ChromeDriverManager().install()}
-        browser = Browser('chrome', **executable_path, headless=False)  
+        browser = Browser('chrome', **executable_path, headless=True)  
             
     scrape_data = {}
 
@@ -25,6 +25,7 @@ def scrape():
         # print("The web site is trying to load ........" )
         browser.visit(url_redplanetscience)
         time.sleep(2) 
+        browser.reload()
 
     html_redplanetscience = browser.html
     soup_redplanetscience = BeautifulSoup(html_redplanetscience, 'html.parser')

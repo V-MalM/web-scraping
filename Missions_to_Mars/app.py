@@ -9,7 +9,7 @@ conn_url = "mongodb://localhost:27017"
 mongo =  pymongo.MongoClient(conn_url)
 
 # Declare the database
-db = mongo.mars_data
+db = mongo.Mars_Facts
 
 # Declare the collection
 mars_data = db.mars_data
