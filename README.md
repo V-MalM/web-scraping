@@ -182,12 +182,7 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
             {{mars_data['galaxyfacts_html'] | safe }}
         </div>
         
-    </div>   
-    
-    <br />
-    <br />
-    <br />
-    <br />
+    </div><br /><br /><br /><br />
 
     <div class="row d-flex justify-content-around">
 
