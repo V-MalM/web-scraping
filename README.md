@@ -105,6 +105,7 @@ galaxyfacts_html = '<table border="1" class="table tablipede-str">
 ```
 </details>
 <br />
+
 ### Mars Hemispheres
 
 * Visited the astrogeology site [here](https://marshemispheres.com/) to obtain high resolution images for each of Mar's hemispheres.
