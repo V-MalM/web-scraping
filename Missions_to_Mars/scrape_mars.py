@@ -4,16 +4,13 @@ import pandas as pd
 import time
 from webdriver_manager.chrome import ChromeDriverManager
 
-
-
-
 def scrape(): 
     # Setup splinter
     browser = "NOT OPEN YET"
     print ("browser " + browser)
     if (browser == "NOT OPEN YET"):
         executable_path = {'executable_path': ChromeDriverManager().install()}
-        browser = Browser('chrome', **executable_path, headless=False)  
+        browser = Browser('chrome', **executable_path, headless=True)  
 
     # print ("browser here")
     # print(browser)            
@@ -53,15 +50,21 @@ def scrape():
     url_spaceimages = 'https://spaceimages-mars.com/'
     browser.visit(url_spaceimages)
     #browser.reload()
+
+
     html_spaceimages = browser.html
     soup_spaceimages = BeautifulSoup(html_spaceimages, 'html.parser')
+    results_spaceimages = soup_spaceimages.find('div', class_='floating_text_area')
+    featured_image = results_spaceimages.find('a').text.strip().upper()
 
-    results_spaceimages = soup_spaceimages.find('a', class_='showimg fancybox-thumbs')
-    # print(results_spaceimages)
-    featured_image = results_spaceimages.get('href')
+    if (featured_image != "" and featured_image == "FULL IMAGE"):
+        featured_image = results_spaceimages.find('a').get('href')
+    else:
+        featured_image == soup_spaceimages.find('a', class_='showimg fancybox-thumbs').get('href')
+
     featured_image_url = url_spaceimages + featured_image
-    # print(featured_image_url)
     scrape_data["featured_image_url"]  = featured_image_url
+
 
     #### Mars Facts
     
@@ -77,6 +80,7 @@ def scrape():
     galaxyfacts_html = galaxyfacts_html.replace('class="dataframe"','class="table tablipede-str"')
     galaxyfacts_html = galaxyfacts_html.replace('<thead>    <tr style="text-align: right;">      <th>0</th>      <th>1</th>    </tr>  </thead>','')
     scrape_data["galaxyfacts_html"]  = galaxyfacts_html
+    
 
     ### Mars Hemispheres
 
