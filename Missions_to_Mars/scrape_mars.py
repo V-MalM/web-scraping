@@ -22,7 +22,6 @@ def scrape():
     
     # If the website did not entirely load and failed to fetch info
     while len(browser.find_by_xpath('//div[@class="list_text"]')) == 0  :
-        # print("The web site is trying to load ........" )
         browser.visit(url_redplanetscience)
         time.sleep(2) 
         browser.reload()
