@@ -158,7 +158,6 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 
   {% for mars_data in results %}
     <div class="row d-flex justify-content-around">
-
         <div class="col-sm-12  col-md-12 col-lg-12">
           
           <h4>Latest Mars News</h4> <h6>{{mars_data['news_date']}}</h6><br /><hr>
@@ -166,33 +165,26 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
           
           <p>{{mars_data['news_para']}}</p>
         </div>
-        
     </div>
 <br />
     <div class="row d-flex justify-content-around">
-
         <div class="col-sm-12  col-md-12 col-lg-8">
-          <h6>Featured Image</h6><br />
-          
+          <h6>Featured Image</h6><br />     
           <p><img src="{{mars_data['featured_image_url']}}"></p>
         </div>
 
         <div class="col-sm-12  col-md-12 col-lg-4">
             <h6>Mars Facts</h6><br />
             {{mars_data['galaxyfacts_html'] | safe }}
-        </div>
-        
+        </div>        
     </div><br /><br /><br /><br />
 
     <div class="row d-flex justify-content-around">
-
         <div class="col-sm-12  col-md-12 col-lg-12">
           <center><h4>Mars Hemispheres</h4></center>
-        </div>
-        
+        </div> 
     </div>
     <hr>
-
     
     {%for each_url in mars_data['hemisphere_image_urls']%}
     
