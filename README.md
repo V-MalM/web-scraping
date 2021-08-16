@@ -150,6 +150,80 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 * Created a template HTML file called ['index.html'](App_Code_Rep/templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
   * used jinja2 to receive the data from the app and display it in HTML template.
 
+
+<details>
+<summary><strong>Click to see code!</strong></summary>
+
+```python
+
+  {% for mars_data in results %}
+    <div class="row d-flex justify-content-around">
+
+        <div class="col-sm-12  col-md-12 col-lg-12">
+          
+          <h4>Latest Mars News</h4> <h6>{{mars_data['news_date']}}</h6><br /><hr>
+          <h6>{{mars_data['news_title']}}</h6>
+          
+          <p>{{mars_data['news_para']}}</p>
+        </div>
+        
+    </div>
+<br />
+    <div class="row d-flex justify-content-around">
+
+        <div class="col-sm-12  col-md-12 col-lg-8">
+          <h6>Featured Image</h6><br />
+          
+          <p><img src="{{mars_data['featured_image_url']}}"></p>
+        </div>
+
+        <div class="col-sm-12  col-md-12 col-lg-4">
+            <h6>Mars Facts</h6><br />
+            {{mars_data['galaxyfacts_html'] | safe }}
+        </div>
+        
+    </div>   
+    
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="row d-flex justify-content-around">
+
+        <div class="col-sm-12  col-md-12 col-lg-12">
+          <center><h4>Mars Hemispheres</h4></center>
+        </div>
+        
+    </div>
+    <hr>
+
+    
+    {%for each_url in mars_data['hemisphere_image_urls']%}
+    
+    {% if loop.index is not divisibleby 2 %}
+    <div class="row d-flex justify-content-around row_s">
+    {% endif %}
+    <div class="col-sm-12  col-md-12 col-lg-5 col_s">
+      <img src="{{each_url['img_url']}}" width="100%">
+      <br />
+      <h6 class="visualization_page_h"><center>{{each_url['title']}}</center></h6><br />  
+    </div>  
+    {% if loop.index is divisibleby 2 %}
+    </div>
+    {% endif %}
+    {% endfor %}
+    
+    {% if mars_data['hemisphere_image_urls']|length is not divisibleby 2 %}
+    </div>
+    {% endif %}    
+
+  {% endfor %}   
+
+```
+</details>
+<br />  
+
 * Used bootstarp for HTML template and css for styling the template.
 
 ## Screenshots of final application
