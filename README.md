@@ -6,7 +6,7 @@ To build a web application that scrapes various websites for data related to the
 
 ## Step 1 - Scraping
 
-Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter, MongoDB.
+Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
 * Created a Jupyter Notebook file called `mission_to_mars.ipynb` and built code to complete all scraping and analysis tasks. The following outlines what data was scraped.
 
@@ -26,6 +26,7 @@ news_p = "They look like twins. But under the hood, the rover currently explorin
 
 ```
 </details>
+<br />
 
 ### JPL Mars Space Images - Featured Image
 
@@ -52,6 +53,17 @@ featured_image_url = 'https://spaceimages-mars.com/image/featured/mars3.jpg'
 
 * Saved the HTML string to a variable 'galaxyfacts_html'.
 
+<details>
+<summary><strong>Click to see an example!</strong></summary>
+
+```python
+
+# Example:
+galaxyfacts_html = "<table border="1" class="table tablipede-str">    <tbody>    <tr>      <td>Equatorial Diameter:</td>      <td>6,792 km</td>    </tr>    <tr>      <td>Polar Diameter:</td>      <td>6,752 km</td>    </tr>    <tr>      <td>Mass:</td>      <td>6.39 × 10^23 kg (0.11 Earths)</td>    </tr>    <tr>      <td>Moons:</td>      <td>2 ( Phobos &amp; Deimos )</td>    </tr>    <tr>      <td>Orbit Distance:</td>      <td>227,943,824 km (1.38 AU)</td>    </tr>    <tr>      <td>Orbit Period:</td>      <td>687 days (1.9 years)</td>    </tr>    <tr>      <td>Surface Temperature:</td>      <td>-87 to -5 °C</td>    </tr>    <tr>      <td>First Record:</td>      <td>2nd millennium BC</td>    </tr>    <tr>      <td>Recorded By:</td>      <td>Egyptian astronomers</td>    </tr>  </tbody></table>"
+
+```
+</details>
+<br />
 ### Mars Hemispheres
 
 * Visited the astrogeology site [here](https://marshemispheres.com/) to obtain high resolution images for each of Mar's hemispheres.
@@ -80,6 +92,7 @@ hemisphere_image_urls = [{'title': 'Cerberus Hemisphere Enhanced',
 
 ```
 </details>
+<br />
 
 ## Step 2 - MongoDB and Flask Application
 
