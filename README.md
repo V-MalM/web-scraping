@@ -156,7 +156,7 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 
 ```python
 
-  {% for mars_data in results %}
+{% for mars_data in results %}
     <div class="row d-flex justify-content-around">
         <div class="col-sm-12  col-md-12 col-lg-12">
           
@@ -166,7 +166,7 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
           <p>{{mars_data['news_para']}}</p>
         </div>
     </div>
-<br />
+    <br />
     <div class="row d-flex justify-content-around">
         <div class="col-sm-12  col-md-12 col-lg-8">
           <h6>Featured Image</h6><br />     
@@ -188,24 +188,25 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
     
     {%for each_url in mars_data['hemisphere_image_urls']%}
     
-    {% if loop.index is not divisibleby 2 %}
-    <div class="row d-flex justify-content-around row_s">
-    {% endif %}
-    <div class="col-sm-12  col-md-12 col-lg-5 col_s">
-      <img src="{{each_url['img_url']}}" width="100%">
-      <br />
-      <h6 class="visualization_page_h"><center>{{each_url['title']}}</center></h6><br />  
-    </div>  
-    {% if loop.index is divisibleby 2 %}
-    </div>
-    {% endif %}
+        {% if loop.index is not divisibleby 2 %}
+        <div class="row d-flex justify-content-around row_s">
+        {% endif %}
+        <div class="col-sm-12  col-md-12 col-lg-5 col_s">
+        <img src="{{each_url['img_url']}}" width="100%">
+        <br />
+        <h6 class="visualization_page_h"><center>{{each_url['title']}}</center></h6><br />  
+        </div>  
+        {% if loop.index is divisibleby 2 %}
+        </div>
+        {% endif %}
+
     {% endfor %}
     
     {% if mars_data['hemisphere_image_urls']|length is not divisibleby 2 %}
     </div>
     {% endif %}    
 
-  {% endfor %}   
+{% endfor %}   
 
 ```
 </details>
