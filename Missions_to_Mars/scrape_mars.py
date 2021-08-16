@@ -10,7 +10,7 @@ def scrape():
     
     if (browser == "NOT OPEN YET"):
         executable_path = {'executable_path': ChromeDriverManager().install()}
-        browser = Browser('chrome', **executable_path, headless=True)  
+        browser = Browser('chrome', **executable_path, headless=False)  
             
     scrape_data = {}
 
