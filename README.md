@@ -14,12 +14,23 @@ Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/S
 
 * Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored the text to variables. Also scraped the date of the article which is ofcourse, the current date.
 
+
+<details>
+<summary><strong>Click to see code!</strong></summary>
+
 ```python
+
 # Example:
 news_date = "08/16/2021"
 news_title = "NASA's Next Mars Mission to Investigate Interior of Red Planet"
 news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up this summer, on course for launch next May from Vandenberg Air Force Base in central California -- the first interplanetary launch in history from America's West Coast."
+
+
 ```
+</details>
+
+<br />
+
 
 ### JPL Mars Space Images - Featured Image
 
