@@ -59,7 +59,7 @@ featured_image_url = 'https://spaceimages-mars.com/image/featured/mars3.jpg'
 ```python
 
 # Example:
-galaxyfacts_html = "<table border="1" class="table tablipede-str">
+galaxyfacts_html = '<table border="1" class="table tablipede-str">
         <tbody>
             <tr>
                 <td>Equatorial Diameter:</td>
@@ -98,7 +98,9 @@ galaxyfacts_html = "<table border="1" class="table tablipede-str">
                 <td>Egyptian astronomers</td>
             </tr>
         </tbody>
-    </table>"
+    </table>'
+
+            
 
 ```
 </details>
@@ -149,26 +151,14 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 
 * Used bootstarp for HTML template and css for styling the template.
 
-![final_app_part1.png](Images/final_app.png)
+## Screenshots of final application
+![facts](App_Screen_Shots/screen1.jpg)
+![full_res_images](App_Screen_Shots/screen2.jpg)
 
-- - -
+## Key Notes
 
-## Step 3 - Submission
+* Used Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
 
-To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
+* Used Pymongo for CRUD applications for database. Fot this project, only one document (record) was saved by overwriting the existing document each time the `/scrape` url is visited and new data is obtained.
 
-1. The Jupyter Notebook containing the scraping code used.
-
-2. Screenshots of your final application.
-
-3. Submit the link to your new repository to BootCampSpot.
-
-4. Ensure your repository has regular commits (i.e. 20+ commits) and a thorough README.md file
-
-## Hints
-
-* Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
-
-* Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the `/scrape` url is visited and new data is obtained.
-
-* Use Bootstrap to structure your HTML template.
+* Used Bootstrap and custom css to structure HTML template.
