@@ -12,8 +12,7 @@ Completed scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/S
 
 ### NASA Mars News
 
-* Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored the text to variables. Also scraped the date of the article which is ofcourse, the current date.
-
+* Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored the text to variables. Also scraped the date of the article.
 
 <details>
 <summary><strong>Click to see an example!</strong></summary>
@@ -27,9 +26,6 @@ news_p = "They look like twins. But under the hood, the rover currently explorin
 
 ```
 </details>
-
-<br />
-
 
 ### JPL Mars Space Images - Featured Image
 
@@ -66,17 +62,24 @@ featured_image_url = 'https://spaceimages-mars.com/image/featured/mars3.jpg'
 
 * Appended the dictionary with the image url string and the hemisphere title to a list. This list will contain one dictionary for each hemisphere.
 
-```python
-# Example:
-hemisphere_image_urls = [
-    {"title": "Valles Marineris Hemisphere", "img_url": "..."},
-    {"title": "Cerberus Hemisphere", "img_url": "..."},
-    {"title": "Schiaparelli Hemisphere", "img_url": "..."},
-    {"title": "Syrtis Major Hemisphere", "img_url": "..."},
-]
-```
 
-- - -
+<details>
+<summary><strong>Click to see an example!</strong></summary>
+
+```python
+
+# Example:
+hemisphere_image_urls = [{'title': 'Cerberus Hemisphere Enhanced',
+  'img_url': 'https://marshemispheres.com/images/full.jpg'},
+ {'title': 'Schiaparelli Hemisphere Enhanced',
+  'img_url': 'https://marshemispheres.com/images/schiaparelli_enhanced-full.jpg'},
+ {'title': 'Syrtis Major Hemisphere Enhanced',
+  'img_url': 'https://marshemispheres.com/images/syrtis_major_enhanced-full.jpg'},
+ {'title': 'Valles Marineris Hemisphere Enhanced',
+  'img_url': 'https://marshemispheres.com/images/valles_marineris_enhanced-full.jpg'}]
+
+```
+</details>
 
 ## Step 2 - MongoDB and Flask Application
 
