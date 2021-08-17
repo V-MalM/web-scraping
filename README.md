@@ -2,6 +2,19 @@
 
 ![mission_to_mars](Images/mission_to_mars.png)
 
+## Repository Files and Folders:
+
+*  [App Screen Shots](/App_Screen_Shots)  
+*  [Mission_to_Mars(Code)](/Mission_to_Mars) : 
+    * [CSS](/Mission_to_Mars/static)  
+    * [Template](/Mission_to_Mars/templates)
+    * [Jupyter Notebook  'mission_to_mars.ipynb'](mission_to_mars.ipynb). Scraping code 
+    * [Python file  'scrape_mars.py'](scrape_mars.py). scrape() function using scraping code developed in the Jupyter notebook
+    * [Flask app file  'app.py'](app.py)
+*  [Images for Readme](/Images)      
+
+## Project Description 
+
 This web application scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. Following outlines the process.
 
 ## Step 1 - Scraping
