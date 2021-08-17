@@ -6,11 +6,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape(): 
     # Setup splinter
-    browser = "NOT OPEN YET"
-    
-    if (browser == "NOT OPEN YET"):
-        executable_path = {'executable_path': ChromeDriverManager().install()}
-        browser = Browser('chrome', **executable_path, headless=False)  
+
+    executable_path = {'executable_path': ChromeDriverManager().install()}
+    browser = Browser('chrome', **executable_path, headless=False)  
             
     scrape_data = {}
 
@@ -23,7 +21,7 @@ def scrape():
     # If the website did not entirely load and failed to fetch info
     while len(browser.find_by_xpath('//div[@class="list_text"]')) == 0  :
         browser.visit(url_redplanetscience)
-        time.sleep(2) 
+        #time.sleep(2) 
         browser.reload()
 
     html_redplanetscience = browser.html

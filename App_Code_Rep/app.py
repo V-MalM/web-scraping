@@ -3,6 +3,7 @@ import pymongo
 from flask_pymongo import PyMongo
 import scrape_mars
 
+
 app = Flask(__name__)
 
 # Connecting to MongoDB
@@ -41,4 +42,4 @@ def scraper():
     return redirect("/", code=302)
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
