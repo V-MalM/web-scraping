@@ -230,6 +230,9 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 
 * Used Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
 
-* Used Pymongo for CRUD applications for database. Fot this project, only one document (record) was saved by overwriting the existing document each time the `/scrape` url is visited and new data is obtained.
+* Used Pymongo for CRUD applications for database. 
+ * Fot this project, only one document (record) was saved by overwriting the existing document each time the `/scrape` url is visited and new data is obtained. The code can easily be adapted for multipe records (with few minor changes)
 
 * Used Bootstrap and custom css to structure HTML template.
+
+* Tested multiuple times and the app executes with out any errors.
