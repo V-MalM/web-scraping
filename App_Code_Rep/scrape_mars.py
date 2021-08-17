@@ -97,7 +97,6 @@ def scrape():
         hemisphere_image_urls.append(url_dict)
       
     
-    # print(hemisphere_image_urls)
     scrape_data["hemisphere_image_urls"]  = hemisphere_image_urls
 
     browser.quit()
