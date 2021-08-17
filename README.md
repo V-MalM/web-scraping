@@ -5,11 +5,11 @@
 ## Repository Files and Folders:
 
 *  [Mission_to_Mars(Code)](/Mission_to_Mars) : 
-    * [CSS](/Mission_to_Mars/static)  
+    * [CSS](/Mission_to_Mars/static/css)  
     * [Template](/Mission_to_Mars/templates)
-    * [Jupyter Notebook  'mission_to_mars.ipynb'](mission_to_mars.ipynb). Scraping code 
-    * [Python file  'scrape_mars.py'](scrape_mars.py). scrape() function using scraping code developed in the Jupyter notebook
-    * [Flask app file  'app.py'](app.py)
+    * [Jupyter Notebook  'mission_to_mars.ipynb'](/Mission_to_Mars/mission_to_mars.ipynb). Scraping code 
+    * [Python file  'scrape_mars.py'](/Mission_to_Mars/scrape_mars.py). scrape() function using scraping code developed in the Jupyter notebook
+    * [Flask app file  'app.py'](/Mission_to_Mars/app.py)
 *  [App Screen Shots](/App_Screen_Shots)      
 *  [Images for Readme](/Images)      
 
