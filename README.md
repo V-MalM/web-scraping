@@ -21,7 +21,7 @@ This web application scrapes various websites for data related to the Mission to
 
 Used Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
-* Jupyter Notebook ['mission_to_mars.ipynb'](App_Code_Rep/mission_to_mars.ipynb) has all the code to that was built to complete all scraping and analysis tasks. The following outlines what data was scraped.
+* Jupyter Notebook ['mission_to_mars.ipynb'](/Mission_to_Mars/mission_to_mars.ipynb) has all the code to that was built to complete all scraping and analysis tasks. The following outlines what data was scraped.
 
 ### NASA Mars News
 
@@ -153,16 +153,16 @@ hemisphere_image_urls = [{'title': 'Cerberus Hemisphere Enhanced',
 
 Used MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
-* Started by converting Jupyter notebook into a Python script called ['scrape_mars.py'](App_Code_Rep/scrape_mars.py). Created a function called `scrape` that will execute all scraping code from above and return one Python dictionary containing all of the scraped data.
+* Started by converting Jupyter notebook into a Python script called ['scrape_mars.py'](/Mission_to_Mars/scrape_mars.py). Created a function called `scrape` that will execute all scraping code from above and return one Python dictionary containing all of the scraped data.
 
-* Next, created a route called `/scrape` that will import ['scrape_mars.py'](App_Code_Rep/scrape_mars.py) script and call  `scrape` function.
+* Next, created a route called `/scrape` that will import 'scrape_mars.py' script and call  `scrape` function.
 
   * Stored the return value in Mongo as a Python dictionary.
   * ![Mars_Facts_DB](Images/mongo.jpg)
 
 * Created a root route `/` that will query Mongo database and pass the mars data into an HTML template to display the data.
 
-* Created a template HTML file called ['index.html'](App_Code_Rep/templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
+* Created a template HTML file called ['index.html'](Mission_to_Mars/templates/index.html) that will take the mars data dictionary and display all of the data in the appropriate HTML elements. 
   * used jinja to render the final HTML document.
 
 
