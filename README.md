@@ -21,11 +21,11 @@ This web application scrapes various websites for data related to the Mission to
 
 Used Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
-* Jupyter Notebook ['mission_to_mars.ipynb'](/Mission_to_Mars/mission_to_mars.ipynb) has all the code to that was built to complete all scraping and analysis tasks. The following outlines what data was scraped.
+* Jupyter Notebook ['mission_to_mars.ipynb'](/Mission_to_Mars/mission_to_mars.ipynb) has the code that was built to complete all scraping and analysis tasks. The following outlines what data was scraped.
 
 ### NASA Mars News
 
-* Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored the text to variables. Also scraped the date of the article.
+* Scraped the [Mars News Site](https://redplanetscience.com/) and collected the latest News Title and Paragraph Text. Stored to variables. Also scraped the date of the article.
 
 <details>
 <summary><strong>Click to see an example!</strong></summary>
@@ -157,7 +157,7 @@ Used MongoDB with Flask templating to create a new HTML page that displays all o
 
 * Next, created a route called `/scrape` that will import 'scrape_mars.py' script and call  `scrape` function.
 
-  * Stored the return value in Mongo as a Python dictionary.
+  * Stored the return value in MongoDB
   * ![Mars_Facts_DB](Images/mongo.jpg)
 
 * Created a root route `/` that will query Mongo database and pass the mars data into an HTML template to display the data.

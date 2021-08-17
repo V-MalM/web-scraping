@@ -5,10 +5,18 @@ import time
 from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape(): 
-    # Setup splinter
+    # Setup Splinter
 
+    # this will install the latest version each time. And will work on any sysytem.
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)  
+
+    # this will get the exe file locally. Good for development and testing.
+    # The path must be changed if it were to be executed in another system.
+
+    # driver = r'C:\Users\vmuty\.wdm\drivers\chromedriver\win32\92.0.4515.107\chromedriver.exe'
+    # browser = Browser('chrome', executable_path = driver, headless = False)
+    
             
     scrape_data = {}
 
